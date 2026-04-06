@@ -5,7 +5,7 @@ import { useAuth } from '../context/AuthContext';
 
 export default function Login() {
   const [email, setEmail] = useState('test@police.gov');
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState('password123');
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
