@@ -2,6 +2,8 @@
 
 A high-trust, minimal React dashboard for visualizing and managing police unit hierarchies.
 
+Documentation : https://docs.google.com/document/d/1l-9OZMIcQhP39OUMfEfLR6V6VgFulgfT/edit?usp=sharing&ouid=115595895889439206996&rtpof=true&sd=true
+
 ## ✨ Features
 * **Hierarchy Visualization:** Clear, nested tree-view of reporting structures.
 * **Dynamic Management:** Seamlessly add or edit units at any level.
