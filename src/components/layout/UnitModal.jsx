@@ -1,17 +1,17 @@
 import { useState, useEffect } from 'react';
 
-export default function UnitModal({ isOpen, onClose, onSubmit, initialData }) {
+export default function UnitModal({ isOpen, onClose, onSubmit, initialData, loading }) {
   const [form, setForm] = useState({
     name: '',
     level: '',
-    parentId: ''
+    parentId: '' || null,
   });
 
   useEffect(() => {
     if (initialData) {
       setForm(initialData);
     } else {
-      setForm({ name: '', level: '', parentId: '' });
+      setForm({ name: '', level: '', parentId: '' || null });
     }
   }, [initialData]);
 
@@ -33,7 +33,7 @@ export default function UnitModal({ isOpen, onClose, onSubmit, initialData }) {
           />
 
           <input
-            placeholder="Level (ZONE, RANGE...)"
+            placeholder="Level (RANGE, DISTRICT, SDPO, PS)"
             className="w-full border p-2 rounded-lg"
             value={form.level}
             onChange={(e) => setForm({ ...form, level: e.target.value })}
@@ -53,6 +53,7 @@ export default function UnitModal({ isOpen, onClose, onSubmit, initialData }) {
           </button>
 
           <button
+            disabled={loading}
             onClick={() => onSubmit(form)}
             className="bg-blue-600 text-white px-4 py-2 rounded-lg"
           >
